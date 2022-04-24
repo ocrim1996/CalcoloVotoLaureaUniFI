@@ -36,22 +36,22 @@ if __name__ == "__main__":
     Parametri da impostare:
         - media_pesata: inserire la media pesata
         - n_cfu: inserire il numero di CFU (pari a 96 per CdLM in Ingegneria Informatica)
-        - voto_tesi: inserire il voto della tesi
         - T: inserire la durata della carriera in mesi definita come la differenza tra le date di verbalizzazione del 
             primo ed ultimo esame con voto.
     """
     # Inserire i tuoi dati
     media_pesata = 28.53
     n_cfu = 96
-    voto_tesi = 28
-    T = 27
+    T = 32
 
-    V_110 = calcola_V_110(media_pesata, n_cfu, voto_tesi)
+    # Si calcola il voto finale con tutti i possibili voti della tesi (da 18 a 30)
+    for voto_tesi in range(18, 31):
+        V_110 = calcola_V_110(media_pesata, n_cfu, voto_tesi)
 
-    delta_1 = incremento1(V_110)
-    delta_2 = incremento2(T)
+        delta_1 = incremento1(V_110)
+        delta_2 = incremento2(T)
 
-    # Calcolo del Voto Finale di Laurea ( V_f = V_110 + delta_1 + delta_2 )
-    V_L = V_110 + delta_1 + delta_2
+        # Calcolo del Voto Finale di Laurea ( V_f = V_110 + delta_1 + delta_2 )
+        V_L = V_110 + delta_1 + delta_2
 
-    print("· Il voto finale di laurea è:", round(V_L))
+        print("·Voto Tesi -> " + str(voto_tesi) + ", Il Voto Finale di Laurea è: " + str(round(V_L)))
