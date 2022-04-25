@@ -42,7 +42,7 @@ if __name__ == "__main__":
     # Inserire i tuoi dati
     media_pesata = 28.531
     n_cfu = 96
-    T = 32
+    T = 27
 
     # Si calcola il voto finale con tutti i possibili voti della tesi (da 18 a 30)
     for voto_tesi in range(18, 31):
