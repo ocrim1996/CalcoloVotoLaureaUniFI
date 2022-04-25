@@ -24,8 +24,13 @@ L’**incremento** ***Δ2*** dipende dalla durata della carriera ***T*** (in mes
 
 # To Run
 
-Per eseguire il progetto:
+Per calcolare il **Voto di Laurea**, eseguire:
 
 ```shell
 python3 calcolo_voto_di_laurea.py
+```
+
+Per calcolare invece la **Media Ponderata** degli esami, eseguire:
+```shell
+python3 calcolo_media_pesata.py
 ```

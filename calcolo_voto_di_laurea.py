@@ -40,7 +40,7 @@ if __name__ == "__main__":
             primo ed ultimo esame con voto.
     """
     # Inserire i tuoi dati
-    media_pesata = 28.53
+    media_pesata = 28.531
     n_cfu = 96
     T = 32
 
